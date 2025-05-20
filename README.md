@@ -50,8 +50,7 @@ The key innovation is that VAEs learn a continuous latent space where similar in
 
 The VAE is trained by optimizing the Evidence Lower Bound (ELBO):
 
-![Formula](https://latex.codecogs.com/png.latex?\mathcal{L}(\theta,\phi;x)=\mathbb{E}_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)]-D_{\text{KL}}(q_{\phi}(z|x)\parallel p(z)))
-
+![Formula](https://latex.codecogs.com/svg.image?$\mathcal{L}(\theta,\phi;x)=\mathbb{E}{q{\phi}(z|x)}[\log&space;p_{\theta}(x|z)]-D_{\text{KL}}(q_{\phi}(z|x)\parallel&space;p(z))$)
 
 Where the first term is the reconstruction loss and the second term is the Kullback-Leibler divergence that regularizes the latent space.
 
