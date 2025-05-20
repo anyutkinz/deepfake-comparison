@@ -53,7 +53,7 @@ The VAE is trained by optimizing the Evidence Lower Bound (ELBO):
 $\mathcal{L}(\theta, \phi; x) = \mathbb{E}_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)] - D_{\text{KL}}(q_{\phi}(z|x) \parallel p(z))$
 Where the first term is the reconstruction loss and the second term is the Kullback-Leibler divergence that regularizes the latent space.
 
-### Implementation Details
+### Implementation Details:
 
 While I tried to maintain the classical VAE architecture, I incorporated several enhancements to improve training stability and generation quality:
 
@@ -84,7 +84,7 @@ The facial features are recognizable and consistent across samples, showing that
 
 The model shows good stability in training, with relatively consistent quality across different samples, indicating that the cyclical KL annealing technique was effective in balancing the reconstruction vs. regularization trade-off.
 
-## GAN (Generative Adversarial Network)
+## `GAN (Generative Adversarial Network):`
 
 Generative Adversarial Networks, introduced by Goodfellow et al. in 2014, represent a fundamentally different approach to generative modeling. GANs consist of two neural networks - a generator and a discriminator - engaged in a minimax game:
 
@@ -97,7 +97,7 @@ $$\min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \math
 
 Where G is the generator, D is the discriminator, x represents real data, and z is random noise input to the generator.
 
-### Implementation Details
+### Implementation Details:
 
 Referring to the `train_classic_gan.py` script, I implemented a Wasserstein GAN with gradient penalty (WGAN-GP), incorporating several techniques from recent literature:
 
@@ -146,7 +146,7 @@ The model still falls short of photorealism because:
 
 Nevertheless, the results demonstrate that the implemented stability techniques were effective in producing coherent face images with reasonable diversity.
 
-## Hybrid Model
+## `Hybrid Model:`
 
 To make a long story short - this model was completely unsuccessful in the training process. I couldn't achieve stable training, and consequently, there's no possibility of convergence. Nevertheless, I still have some hopes for this model!
 
@@ -183,7 +183,7 @@ Obviously, this model is the most complex, and therefore requires a more careful
 
 Nevertheless, if we look at the generated images, we can see that even a "poorly" trained model produces not-so-bad results. Although they are not as diverse and a bit blurry, we can still notice that the facial features in this case are most similar to real faces, rather than low-budget horror games, as in the case of the GAN.
 
-## Future Improvements
+## `Future Improvements:`
 
 ### Hybrid Model
 For the reasons described above, I dare to assume that with more time dedicated to experimentation, I could achieve good results from this model. Stay tuned or if you have any suggestions - feel free to share your opinion on implementation!
