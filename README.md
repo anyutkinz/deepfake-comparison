@@ -50,8 +50,7 @@ The key innovation is that VAEs learn a continuous latent space where similar in
 
 The VAE is trained by optimizing the Evidence Lower Bound (ELBO):
 
-$ \mathcal{L}(\theta, \phi; x) = \mathbb{E}_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)] - D_{KL}(q_{\phi}(z|x) || p(z)) $
-
+$\mathcal{L}(\theta, \phi; x) = \mathbb{E}_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)] - D_{\text{KL}}(q_{\phi}(z|x) \parallel p(z))$
 Where the first term is the reconstruction loss and the second term is the Kullback-Leibler divergence that regularizes the latent space.
 
 ### Implementation Details
@@ -94,7 +93,7 @@ Generative Adversarial Networks, introduced by Goodfellow et al. in 2014, repres
 
 This adversarial training framework is formalized as:
 
-$$ \min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log (1 - D(G(z)))] $$
+$$\min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log (1 - D(G(z)))]$$
 
 Where G is the generator, D is the discriminator, x represents real data, and z is random noise input to the generator.
 
@@ -199,10 +198,6 @@ Several quantitative evaluation metrics could be implemented:
 2. **Inception Score (IS)**: Evaluates both the quality and diversity of generated images, though it has known limitations when applied to face generation.
 
 3. **Perceptual Path Length (PPL)**: Measures the smoothness of the latent space, indicating how well the model generalizes.
-
-4. **Precision and Recall**: Evaluates both the quality and diversity aspects separately, avoiding the limitations of single-metric evaluations.
-
-5. **User Studies**: Human evaluation of image quality, realism, and diversity could provide additional insights.
 
 Implementing these metrics would provide more objective comparisons between the different models and track improvements over iterations.
 
