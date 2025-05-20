@@ -94,7 +94,7 @@ Generative Adversarial Networks, introduced by Goodfellow et al. in 2014, repres
 
 This adversarial training framework is formalized as:
 
-$$\min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log (1 - D(G(z)))]$$
+![Formula](https://latex.codecogs.com/svg.image?$$\min_G\max_D&space;V(D,G)=\mathbb{E}_{x\sim&space;p_{\text{data}}}[\log&space;D(x)]&plus;\mathbb{E}_{z\sim&space;p_z}[\log(1-D(G(z)))]$$)
 
 Where G is the generator, D is the discriminator, x represents real data, and z is random noise input to the generator.
 
