@@ -1,9 +1,16 @@
 # **Training VAE, GAN and Hybrid Models on (small) CelebA Dataset**
 
 ## `Note:`
+
+***On improvements:***
+
 *This project is not fully completed (according to the author's subjective assessment), however, at this stage it can serve as a good educational resource on the implementation of various generative models. Feel free to send me feedback!*
 
 *In the future, I plan to expand it (see the *Future Improvements* section at the end of this file to learn what exactly I want to add), so you are always welcome to return and observe the progress :)*
+
+***On files:***
+
+Some of the folders are too large to be uploaded to GitHub. If you're interested in the generated images from the training process, my CelebA subset (24K images), and the models, feel free to visit my Google Drive: https://drive.google.com/drive/folders/1-1AAcsYdo19QZUa-SFp7itK73LRC95IE?usp=sharing
 
 ## `Introduction:`
 Anyone who begins their journey in a rapidly developing field, in our case Deep Learning, may find themselves in a challenging position, specifically overwhelmed by numerous research papers, each of which incrementally improves classical models. I found myself in exactly this situation.
