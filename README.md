@@ -1,6 +1,6 @@
 # Training VAE, GAN and Hybrid Models on (small) CelebA Dataset
 
-## Note:
+## `Note:`
 This project is not fully completed (according to the author's subjective assessment), however, at this stage it can serve as a good educational resource on the implementation of various generative models. Feel free to send me feedback!
 
 In the future, I plan to expand it (see the *Future Improvements* section at the end of this file to learn what exactly I want to add), so you are always welcome to return and observe the progress :)
