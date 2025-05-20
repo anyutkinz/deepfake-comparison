@@ -10,7 +10,7 @@
 
 ***On files:***
 
-*Some of the folders are too large to be uploaded to GitHub. If you're interested in the generated images from the training process, my CelebA subset (24K images), and the models, feel free to visit my Google Drive: https://drive.google.com/drive/folders/1-1AAcsYdo19QZUa-SFp7itK73LRC95IE?usp=sharing*
+*Some of the folders are too large to be uploaded to GitHub. If you're interested in the generated images from the training process, my CelebA subset (24K images), and the models, feel free to visit my Google Drive: [https://drive.google.com/drive/folders/1-1AAcsYdo19QZUa-SFp7itK73LRC95IE?usp=sharing](https://drive.google.com/drive/folders/16cq__0bPwd1g14jHph-Rwe71S4D2KaMJ?usp=sharing)*
 
 ## `Introduction:`
 Anyone who begins their journey in a rapidly developing field, in our case Deep Learning, may find themselves in a challenging position, specifically overwhelmed by numerous research papers, each of which incrementally improves classical models. I found myself in exactly this situation.
