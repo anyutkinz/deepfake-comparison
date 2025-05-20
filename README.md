@@ -5,17 +5,17 @@ This project is not fully completed (according to the author's subjective assess
 
 In the future, I plan to expand it (see the *Future Improvements* section at the end of this file to learn what exactly I want to add), so you are always welcome to return and observe the progress :)
 
-## Introduction
+## `Introduction:`
 Anyone who begins their journey in a rapidly developing field, in our case Deep Learning, may find themselves in a challenging position, specifically overwhelmed by numerous research papers, each of which incrementally improves classical models. I found myself in exactly this situation.
 
 What options do we have in such circumstances? All we can do is meticulously search for "ideal" solutions across various papers and experiment, experiment, experiment...
 
-## Goal
+## `Goal:`
 In this repository, you will find my attempts to create stable scripts for various generative models, combining different techniques and design solutions. The main objective is to explore and implement state-of-the-art approaches to image generation while making the implementations accessible and educational. By integrating insights from multiple papers, I aim to create reliable generative models that can be easily understood and modified.
 
 This README file contains only a summary of the scripts, so if you're interested in details - please take the time to look at the scripts themselves. I've tried to leave comprehensive comments inside each script to guide you through the implementation choices and technical considerations.
 
-## Dataset
+## `Dataset:`
 The [CelebA dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) (Celebrities Attributes) is a large-scale face attributes dataset containing more than 200,000 celebrity images with 40 attribute annotations. It's widely used for training and testing face recognition algorithms, generative models, and various computer vision tasks due to its size, quality, and attribute annotations.
 
 Due to limited resources, I used only a small subset of CelebA consisting of 24,000 images.
@@ -38,7 +38,7 @@ The `MultiSplitCelebA` class handles these splits with a reproducible random see
 
 Now let's dive into our models!
 
-## VAE (Variational Autoencoder)
+## `VAE (Variational Autoencoder):`
 
 Variational Autoencoders, introduced by Kingma and Welling in their 2014 paper "Auto-Encoding Variational Bayes," represent a significant advancement in generative models. VAEs combine elements of variational inference and neural networks to create a probabilistic framework for generating new data.
 
@@ -50,7 +50,7 @@ The key innovation is that VAEs learn a continuous latent space where similar in
 
 The VAE is trained by optimizing the Evidence Lower Bound (ELBO):
 
-$$ \mathcal{L}(\theta, \phi; x) = \mathbb{E}_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)] - D_{KL}(q_{\phi}(z|x) || p(z)) $$
+$ \mathcal{L}(\theta, \phi; x) = \mathbb{E}_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)] - D_{KL}(q_{\phi}(z|x) || p(z)) $
 
 Where the first term is the reconstruction loss and the second term is the Kullback-Leibler divergence that regularizes the latent space.
 
