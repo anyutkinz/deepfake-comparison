@@ -43,8 +43,8 @@ Now let's dive into our models!
 Variational Autoencoders, introduced by Kingma and Welling in their 2014 paper "Auto-Encoding Variational Bayes," represent a significant advancement in generative models. VAEs combine elements of variational inference and neural networks to create a probabilistic framework for generating new data.
 
 At its core, a VAE consists of:
-1. An encoder network that maps input data to a probability distribution in the latent space
-2. A decoder network that reconstructs the original input from samples of this distribution
+1. An ,**encoder** network that maps input data to a probability distribution in the latent space
+2. A **decoder** network that reconstructs the original input from samples of this distribution
 
 The key innovation is that VAEs learn a continuous latent space where similar inputs are mapped to nearby points, enabling smooth interpolation and generation of new samples.
 
@@ -78,7 +78,6 @@ The hyperparameters were carefully tuned:
 - KL weight of 0.05 (found through experimentation to balance reconstruction vs. regularization)
 
 
-
 Looking at the generated images, we can see that the VAE produces relatively coherent face structures. The results demonstrate the characteristic "blurriness" common to VAEs, which stems from the probabilistic nature of the model and the use of MSE loss which tends to average out details.
 
 The facial features are recognizable and consistent across samples, showing that the model has learned meaningful representations. Color tones and general face shapes are captured well, though fine details like hair strands or small facial features lack sharpness. This is expected behavior for VAEs, as they prioritize capturing the overall distribution rather than sharp details.
@@ -96,7 +95,7 @@ This adversarial training framework is formalized as:
 
 ![Formula](https://latex.codecogs.com/svg.image?$$\min_G\max_D&space;V(D,G)=\mathbb{E}_{x\sim&space;p_{\text{data}}}[\log&space;D(x)]&plus;\mathbb{E}_{z\sim&space;p_z}[\log(1-D(G(z)))]$$)
 
-Where G is the generator, D is the discriminator, x represents real data, and z is random noise input to the generator.
+Where *G* is the generator, *D* is the discriminator, *x* represents real data, and *z* is random noise input to the generator.
 
 ### Implementation Details:
 
