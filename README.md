@@ -17,6 +17,8 @@ Anyone who begins their journey in a rapidly developing field, in our case Deep 
 
 What options do we have in such circumstances? All we can do is meticulously search for "ideal" solutions across various papers and experiment, experiment, experiment...
 
+![Real footage of me](for_readme/student.png)
+
 ## `Goal:`
 In this repository, you will find my attempts to create stable scripts for various generative models, combining different techniques and design solutions. The main objective is to explore and implement state-of-the-art approaches to image generation while making the implementations accessible and educational. By integrating insights from multiple papers, I aim to create reliable generative models that can be easily understood and modified.
 
