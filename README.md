@@ -29,6 +29,8 @@ The [CelebA dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) (Celebrit
 
 Due to limited resources, I used only a small subset of CelebA consisting of 24,000 images.
 
+![CelebA dataset](for_readme/celeba.png)
+
 ### Why this specific amount?
 According to several research papers, particularly those focusing on GAN training dynamics, approximately 8,000-10,000 images are needed for proper GAN convergence on tasks of this complexity. Using 24,000 images provides a good balance between having enough training data while still being manageable with limited computational resources.
 
@@ -50,6 +52,8 @@ Now let's dive into our models!
 ## `VAE (Variational Autoencoder):`
 
 Variational Autoencoders, introduced by Kingma and Welling in their 2014 paper "Auto-Encoding Variational Bayes," represent a significant advancement in generative models. VAEs combine elements of variational inference and neural networks to create a probabilistic framework for generating new data.
+
+![VAE architecture](for_readme/vae.png)
 
 At its core, a VAE consists of:
 1. An ,**encoder** network that maps input data to a probability distribution in the latent space
@@ -86,6 +90,7 @@ The hyperparameters were carefully tuned:
 - Learning rate of 1e-4 (standard for Adam optimizer)
 - KL weight of 0.05 (found through experimentation to balance reconstruction vs. regularization)
 
+![VAE reconstruction](for_readme/vae_reconstruction.PNG)
 
 Looking at the generated images, we can see that the VAE produces relatively coherent face structures. The results demonstrate the characteristic "blurriness" common to VAEs, which stems from the probabilistic nature of the model and the use of MSE loss which tends to average out details.
 
@@ -96,6 +101,8 @@ The model shows good stability in training, with relatively consistent quality a
 ## `GAN (Generative Adversarial Network):`
 
 Generative Adversarial Networks, introduced by Goodfellow et al. in 2014, represent a fundamentally different approach to generative modeling. GANs consist of two neural networks - a generator and a discriminator - engaged in a minimax game:
+
+![GAN architecture](for_readme/GAN_BBC_Science_Focus_Magazine.webp)
 
 1. The **generator** creates samples to fool the discriminator
 2. The **discriminator** tries to distinguish between real and generated samples
@@ -135,7 +142,7 @@ The techniques mentioned above, particularly the gradient penalty and spectral n
 
 Here are my unique generated images:
 
-
+![Images generated during GAN training](for_readme/gan_generated.png)
 
 Of course, some of them still look quite "questionable." You could even say they appear somewhat frightening, especially during late-night sessions working on this project. However, the result is genuinely not that bad!
 
@@ -189,6 +196,8 @@ The hybrid approach was inspired by several recent papers exploring combinations
 - Diffusion-GAN (Xiao et al., 2021) for combining diffusion models with GANs
 
 Obviously, this model is the most complex, and therefore requires a more careful approach to hyperparameter adjustments, corrections, and thus a large number of experiments which I, in the circumstances of limited computational resources and budget for continuing to purchase subscriptions to Google Colab Pro, decided to temporarily (!) suspend.
+
+![Images generated during hybrid training](for_readme/hybrid_generated.png)
 
 Nevertheless, if we look at the generated images, we can see that even a "poorly" trained model produces not-so-bad results. Although they are not as diverse and a bit blurry, we can still notice that the facial features in this case are most similar to real faces, rather than low-budget horror games, as in the case of the GAN.
 
